@@ -1,0 +1,23 @@
+body {
+    margin: 0px;
+}
+
+p {
+    text-align: center;
+}
+
+.wrapper {
+    height: 100vh;
+    background-image: url( "img/sand.jpg" );
+    background-repeat: no-repeat;
+}
+
+.header {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(30px + 2vmin);
+    color: black;
+}
