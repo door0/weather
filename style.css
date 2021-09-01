@@ -10,6 +10,7 @@ p {
     height: 100vh;
     background-image: url( "img/sand.jpg" );
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .header {
@@ -20,4 +21,5 @@ p {
     justify-content: center;
     font-size: calc(30px + 2vmin);
     color: black;
+    margin: auto;
 }
