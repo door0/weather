@@ -6,35 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
 </head>
-<link rel="stylesheet" href="style.css" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="./css/style.css" />
+<link rel="stylesheet" href="./css/weather-icons.min.css" />
 <body>
     <div class="wrapper">
-        <div class="header">How is the Weather?</div>
-        <div class="weather"></div>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="card"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="card"></div>
-              </div>
-              <div class="carousel-item">
-                <div class="card"></div>
-              </div>
+        <div class="header"></div>
+        
+        <h1 id="weather" class="weather">What's the Weather?</h1>
+
+        <!-- card1 -->
+        <div id="card1" class="card">
+          <div class="cols left">
+            <div class="rows txt-center">
+              <span id="average1" class="average"></span>
+              <i class="wi wi-celsius fsize30"></i>
+              <span id="icon1" class="w-icon-colorize"></span>
+            </div>
+
+            <div class="rows txt-center">
+              <div id="place1" class="place"></div>
             </div>
           </div>
+
+          <div class="cols right">
+            <div class="ondo">
+              <div id="min1" class="min"></div>
+              <div id="max1" class="max"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- card2 -->
+        <div id="card2" class="card">
+          <div id=""></div>
+          <div id=""></div>
+          <div id=""></div>
+          <div id=""></div>
+        </div>
+
+        <div id="search" class="search" >
+          <input type="text" id="cityInput" size="25" placeholder="도시 입력"/>
+          <button type="button" id="searchBtn">검색</button>
+        </div>
     </div>
     
     <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

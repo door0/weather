@@ -1,0 +1,157 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body {
+    margin: 0px;
+    outline: none;
+}
+
+p {
+    text-align: center;
+}
+
+.wrapper {
+    height: 100vh;
+    background-image: url( "../img/sand.jpg" );
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #040404;
+    font-family: 'Noto Sans KR';
+    letter-spacing: -1px;
+    background: url(../img/logo.svg) 49.5% 50% no-repeat;
+    font-size: 0;
+    padding-top: 20px;
+}
+
+h1 {
+    margin: 0 0 0 20px 0;
+    padding: 0;
+    line-height: 30px;
+}
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.card {
+    width: 400px;
+    height: 123px;
+    margin: 0 auto 10px auto;
+    background-color: rgb(223, 223, 223);
+    border-radius: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 376px) {
+    .card {
+        width: calc(100% - 20px);
+        margin: 10px;
+    }
+}
+
+.rows {
+    overflow: hidden;
+}
+.rows.txt-center {
+    text-align: center;
+}
+
+.fsize20 {
+    font-size: 20px;
+}
+.fsize30 {
+    font-size: 30px;
+}
+
+.cols {
+    float: left;
+}
+.cols.left {
+    width: 70%;
+}
+.cols.right {
+    width: 30%;
+}
+
+.card .average {
+    font-size: 30px;
+}
+
+.card .place {
+    line-height: 30px;
+    color: #6d6d6d;
+}
+
+.card img {
+    float: right;
+    width: 100px;
+    height: 100px;
+}
+.card .ondo {
+    position: relative;
+    padding: 10px;
+}
+
+.card .min, .card .max {
+    display: block;
+    flex-direction: column;
+    line-height: 30px;
+}
+
+.w-icon-colorize {
+    display: inline-block;
+    margin-left: 10px;
+}
+.w-icon-colorize i.wi {
+    font-size: 50px;
+}
+
+.search {
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    margin-top: 20px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search input {
+    background-color: transparent;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid black;
+    margin-right: 15px;
+}
+
+input::placeholder {
+    color: black;
+}
+
+.search input:focus {  
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+
+.search button {
+    background-color: transparent;
+    font-size: bold;
+    border: none;
+    cursor: pointer;
+}
