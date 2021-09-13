@@ -11,7 +11,21 @@ let icon1 = document.getElementById("icon1");
 let min1 = document.getElementById("min1");
 let max1 = document.getElementById("max1");
 
-// day weather icon
+// random bg
+let bg = new Array();
+bg[0] = "../img/sand.jpg";
+bg[1] = "../img/cloudy.jpg";
+bg[2] = "../img/rainy.jpg";
+bg[3] = "../img/sunny.jpg";
+
+function showBg() {
+    let imgNum = Math.round(Math.random()*3);
+    let objImg = document.querySelector(".wrapper");
+    objImg.style.backgroundImage = 'url('+ bg[imgNum] + ')';
+    console.log(bg[imgNum])
+}
+
+// day weather icon array
 let weatherDayIcon = {
     '01d' : 'wi-day-sunny', 
     '02d' : 'wi-day-cloudy', 
@@ -24,7 +38,7 @@ let weatherDayIcon = {
     '50d' : 'wi-day-fog'
 };
 
-// night weather icon
+// night weather icon array
 let weatherNightIcon = {
     '01n' : 'wi-night-clear', 
     '02n' : 'wi-night-alt-cloudy', 
@@ -61,8 +75,8 @@ function getWeather(lat, lon) {
    
         average1.innerText = `${temperature}`;
         place1.innerText = `${place}, ${country}`;
-        min1.innerHTML = `${min_temperature}` + ` <i class="wi wi-celsius fsize20"></i>`;
-        max1.innerHTML = `${max_temperature}` + ` <i class="wi wi-celsius fsize20"></i>`;
+        min1.innerHTML = `<i class="wi wi-thermometer-exterior"></i>` + ` ${min_temperature}` + ` <i class="wi wi-celsius fsize20"></i>`;
+        max1.innerHTML = `<i class="wi wi-thermometer"></i>` + ` ${max_temperature}` + ` <i class="wi wi-celsius fsize20"></i>`;
 
         // get current location time - use moment.js
         let timezone = json.timezone;
@@ -82,7 +96,7 @@ function getWeather(lat, lon) {
 
 // get search location
 function getSearchWeather() {
-    let city = document.getElementById("cityInput").value;
+    const city = document.getElementById("cityInput").value;
     card2.style.display = "block";
 
         fetch(
@@ -127,11 +141,18 @@ function getSearchWeather() {
     
                 <div class="cols right">
                     <div class="ondo">
-                        <div id="min2" class="min">${min_temperature} <i class="wi wi-celsius fsize20"></i></div>
-                        <div id="max2" class="max">${max_temperature} <i class="wi wi-celsius fsize20"></i></div>
+                        <div id="min2" class="min"><i class="wi wi-thermometer-exterior fsize20"></i> ${min_temperature} <i class="wi wi-celsius fsize20"></i></div>
+                        <div id="max2" class="max"><i class="wi wi-thermometer fsize20"></i> ${max_temperature} <i class="wi wi-celsius fsize20"></i></div>
                     </div>
                 </div>
             `;
         })
+
+    if( document.getElementById("cityInput").focus() ) {
+        set();
+    }
 }
 
+function set () {
+    city.reset();
+}
