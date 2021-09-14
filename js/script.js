@@ -22,7 +22,6 @@ function showBg() {
     let imgNum = Math.round(Math.random()*3);
     let objImg = document.querySelector(".wrapper");
     objImg.style.backgroundImage = 'url('+ bg[imgNum] + ')';
-    console.log(bg[imgNum])
 }
 
 // day weather icon array
