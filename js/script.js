@@ -18,7 +18,7 @@ bg[1] = "../img/cloudy.jpg";
 bg[2] = "../img/rainy.jpg";
 bg[3] = "../img/sunny.jpg";
 
-function showBg() {
+window.onload = function() {
     let imgNum = Math.round(Math.random()*3);
     let objImg = document.querySelector(".wrapper");
     objImg.style.backgroundImage = 'url('+ bg[imgNum] + ')';
