@@ -13,10 +13,10 @@ let max1 = document.getElementById("max1");
 
 // random bg
 let bg = new Array();
-bg[0] = "../img/sand.jpg";
-bg[1] = "../img/cloudy.jpg";
-bg[2] = "../img/rainy.jpg";
-bg[3] = "../img/sunny.jpg";
+bg[0] = "./img/sand.jpg";
+bg[1] = "./img/cloudy.jpg";
+bg[2] = "./img/rainy.jpg";
+bg[3] = "./img/sunny.jpg";
 
 window.onload = function() {
     let imgNum = Math.round(Math.random()*3);
